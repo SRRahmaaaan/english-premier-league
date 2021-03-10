@@ -16,9 +16,11 @@ const TeamDetails = () => {
         fetch(url)
         .then(response => response.json())
         .then(data => setTeamDetails(data.teams[0]))
-    },[url])
+    }, [url])
+
     const {strAlternate, intFormedYear, strCountry, strGender, strSport, strTeamBadge, strDescriptionEN,strStadium,
                 strStadiumDescription,strStadiumThumb, strFacebook, strInstagram, strTwitter, strYoutube} = teamDetails;
+
     return (
         <section className = "team-details">
             <Header><img src={strTeamBadge} className="team-logo" alt="TeamBadge" /></Header>
@@ -32,7 +34,10 @@ const TeamDetails = () => {
                     <p> <img src={Gender} alt="genderLogo"/>Gender : { strGender}</p>
                 </div>
                 <div className="old-new">
-                    <h1>{ intFormedYear > 1900 ? "It's an nineteenth-century team" : "It's an eighteenth-century team"}</h1>
+                    <h1>{intFormedYear > 1800 && intFormedYear < 1900 ?
+                        "It's an eighteenth-century-team" :
+                        "It's an nineteenth-century team"}</h1>
+                    {/* The oldest team in the Premier League is Aston Villa which is born in 1874 */}
                 </div>
             </div>
 

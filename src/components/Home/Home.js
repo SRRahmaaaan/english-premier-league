@@ -1,8 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import "./Home.css"
-import { useState, useEffect } from "react"
 import Teams from "../Teams/Teams"
-import Header from '../Header/Header'
 import Logo from "./leagueLogo.jpg"
 
 const Home = () => {
@@ -13,11 +11,10 @@ const Home = () => {
         .then(response => response.json())
         .then(data => setInformation(data.teams))
     }, [])
+
     return (
         <section>
-            <Header>
                 <img className = "league-logo" src={Logo} alt="League Logo"/>
-            </Header>
             <div className = "team-container">
             {
                 information.map(info => <Teams info = {info} key = {info.idTeam}></Teams> )
@@ -26,5 +23,4 @@ const Home = () => {
         </section>
     )
 }
-
 export default Home
