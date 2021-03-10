@@ -2,6 +2,8 @@ import React from 'react'
 import "./Home.css"
 import { useState, useEffect } from "react"
 import Teams from "../Teams/Teams"
+import Header from '../Header/Header'
+import Logo from "./leagueLogo.jpg"
 
 const Home = () => {
     const [information, setInformation] = useState([])
@@ -12,11 +14,16 @@ const Home = () => {
         .then(data => setInformation(data.teams))
     }, [])
     return (
-        <div className = "team-container">
+        <section>
+            <Header>
+                <img className = "league-logo" src={Logo} alt="League Logo"/>
+            </Header>
+            <div className = "team-container">
             {
                 information.map(info => <Teams info = {info} key = {info.idTeam}></Teams> )
             }
         </div>
+        </section>
     )
 }
 

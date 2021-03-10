@@ -1,0 +1,80 @@
+.team-details {
+  background-color: #130f40;
+  padding-bottom: 2%;
+}
+.team-details .team-logo {
+  width: 200px;
+  margin-top: 60px;
+}
+.team-details .general-info {
+  background-color: #341f97;
+  width: 70%;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 20px;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.team-details .general-info .info {
+  color: white;
+}
+.team-details .general-info .info h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: deepskyblue;
+  font-family: "Akaya Telivigala", cursive;
+}
+.team-details .general-info .info img {
+  width: 15px;
+  margin-right: 10px;
+}
+.team-details .general-info .info p {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+.team-details .general-info .old-new {
+  height: 100%;
+  width: 400px;
+  border: 2px dashed black;
+  background-color: darkslategray;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.team-details .description,
+.stadium {
+  width: 70%;
+  padding: 2%;
+  background-color: #341f97;
+  margin: 0 auto;
+  border-radius: 20px;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.team-details .title {
+  text-align: center;
+  margin-bottom: 15px;
+  color: deepskyblue;
+  font-size: 2rem;
+  font-family: "Akaya Telivigala", cursive;
+}
+.team-details .stadium {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.team-details .stadium .half-width {
+  width: 50%;
+}
+.team-details .stadium .imgbx img {
+  width: 420px;
+  height: 300px;
+  object-fit: cover;
+}
